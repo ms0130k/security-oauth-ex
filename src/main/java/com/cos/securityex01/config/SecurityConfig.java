@@ -29,7 +29,7 @@ public class SecurityConfig {
 				// hasRole('ROLE_USER')")
 				// .antMatchers("/admin/**").access("hasRole('ROLE_ADMIN') and
 				// hasRole('ROLE_USER')")
-				.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
+				.antMatchers("/admin/**").hasRole("ADMINS")
 				.anyRequest().permitAll()
 				.and()
 				.formLogin()

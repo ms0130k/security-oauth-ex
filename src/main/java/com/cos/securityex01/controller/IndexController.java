@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.cos.securityex01.config.auth.PrincipalDetails;
 import com.cos.securityex01.model.User;
 import com.cos.securityex01.repository.UserRepository;
+import org.springframework.web.context.request.RequestContextHolder;
 
 @Controller
 public class IndexController {
@@ -27,6 +28,7 @@ public class IndexController {
 
 	@GetMapping({ "", "/" })
 	public @ResponseBody String index() {
+        System.out.println(RequestContextHolder.getRequestAttributes().getSessionId());
 		return "인덱스 페이지입니다.";
 	}
 

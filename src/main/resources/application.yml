@@ -9,15 +9,10 @@ server:
       
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/security?serverTimezone=Asia/Seoul
-    username: cos
-    password: cos1234
-    
-  mvc:
-    view:
-      prefix: /templates/
-      suffix: .mustache
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://130.162.157.215:5432/db_shock?currentSchema=security&charsetEncoding=UTF-8&serverTimezone=UTC
+    username: shock
+    password: Kth973897G@#$
 
   jpa:
     hibernate:
@@ -31,8 +26,8 @@ spring:
       client:
         registration:
           google: # /oauth2/authorization/google 이 주소를 동작하게 한다.
-            client-id: 머시기
-            client-secret: 머시기
+            client-id: 532803015901-f0qqichtaanmvuj2vlrbqf778d16tnhg.apps.googleusercontent.com
+            client-secret: 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
             scope:
             - email
             - profile
